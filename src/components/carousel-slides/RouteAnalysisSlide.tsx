@@ -6,7 +6,7 @@ export const RouteAnalysisSlide = () => {
     <CarouselItem className="h-screen flex items-center justify-center">
       <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-center">Анализ маршрутов</h2>
-        <div className="relative h-96 animate-fade-in">
+        <div className="relative h-96">
           <svg className="absolute w-full h-full" viewBox="0 0 400 400">
             <defs>
               <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -20,7 +20,7 @@ export const RouteAnalysisSlide = () => {
             
             <rect width="100%" height="100%" fill="url(#grid)" />
 
-            {/* Main route path */}
+            {/* Animated route path */}
             <path
               d="M50,200 Q125,100 200,200 T350,200"
               stroke="url(#routeGradient)"
@@ -28,44 +28,16 @@ export const RouteAnalysisSlide = () => {
               fill="none"
               id="mainPath"
               strokeLinecap="round"
-              strokeDasharray="5,5"
             />
 
-            {/* Location markers with subtle glow effects */}
-            <g transform="translate(50,200)">
-              <circle r="15" fill="rgba(34,197,94,0.2)" />
-              <Home className="h-6 w-6 text-green-400" style={{ transform: 'translate(-12px, -12px)' }} />
-            </g>
-            
-            <g transform="translate(200,200)">
-              <circle r="15" fill="rgba(234,179,8,0.2)" />
-              <Briefcase className="h-6 w-6 text-yellow-400" style={{ transform: 'translate(-12px, -12px)' }} />
-            </g>
-            
-            <g transform="translate(350,200)">
-              <circle r="15" fill="rgba(168,85,247,0.2)" />
-              <School className="h-6 w-6 text-purple-400" style={{ transform: 'translate(-12px, -12px)' }} />
-            </g>
-
-            {/* Animated point moving along the path */}
-            <circle r="6" fill="white" filter="url(#glow)">
+            {/* Moving dot along the path */}
+            <circle r="8" fill="white" className="animate-route-dot">
               <animateMotion
-                dur="8s"
+                dur="10s"
                 repeatCount="indefinite"
                 path="M50,200 Q125,100 200,200 T350,200"
               />
             </circle>
-
-            {/* Glow filter */}
-            <defs>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                <feMerge>
-                  <feMergeNode in="coloredBlur"/>
-                  <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-              </filter>
-            </defs>
           </svg>
         </div>
         

@@ -8,8 +8,7 @@ export const PersonalizedRecommendationsSlide = () => {
         <h2 className="text-3xl font-bold text-center mb-8">Персональные рекомендации</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Утренние рекомендации */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
+          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-recommendation-pop">
             <div className="flex items-center gap-4 mb-6">
               <Coffee className="h-8 w-8 text-yellow-400" />
               <h3 className="text-xl font-semibold">Доброе утро!</h3>
@@ -32,8 +31,7 @@ export const PersonalizedRecommendationsSlide = () => {
             </div>
           </div>
 
-          {/* Вечерние рекомендации */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
+          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-recommendation-pop [animation-delay:200ms]">
             <div className="flex items-center gap-4 mb-6">
               <Star className="h-8 w-8 text-purple-400" />
               <h3 className="text-xl font-semibold">Вечерний досуг</h3>
@@ -56,8 +54,7 @@ export const PersonalizedRecommendationsSlide = () => {
             </div>
           </div>
 
-          {/* Статистика привычек */}
-          <div className="md:col-span-2 bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
+          <div className="md:col-span-2 bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-recommendation-pop [animation-delay:400ms]">
             <div className="flex items-center gap-4 mb-6">
               <Headphones className="h-8 w-8 text-blue-400" />
               <h3 className="text-xl font-semibold">Ваши привычки</h3>

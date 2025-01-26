@@ -70,27 +70,41 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        "pulse-ring": {
-          "0%": { transform: "scale(0.8)", opacity: "1" },
-          "100%": { transform: "scale(2)", opacity: "0" },
+        "notification-slide": {
+          "0%": { transform: "translateX(100%)" },
+          "10%": { transform: "translateX(0)" },
+          "90%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
         },
-        "move-along-path": {
-          "0%": { 
-            offsetDistance: "0%",
-            offsetRotate: "auto"
-          },
-          "33%": { 
-            offsetDistance: "33%",
-            offsetRotate: "auto"
-          },
-          "66%": { 
-            offsetDistance: "66%",
-            offsetRotate: "auto"
-          },
-          "100%": { 
-            offsetDistance: "100%",
-            offsetRotate: "auto"
-          }
+        "route-dot": {
+          "0%": { transform: "translateX(0) translateY(0)" },
+          "25%": { transform: "translateX(100px) translateY(-50px)" },
+          "50%": { transform: "translateX(200px) translateY(0)" },
+          "75%": { transform: "translateX(300px) translateY(50px)" },
+          "100%": { transform: "translateX(400px) translateY(0)" },
+        },
+        "recommendation-pop": {
+          "0%": { transform: "scale(0.8)", opacity: "0" },
+          "50%": { transform: "scale(1.1)" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        "summary-rotate": {
+          "0%": { transform: "rotateY(0deg)" },
+          "100%": { transform: "rotateY(360deg)" },
+        },
+        "health-pulse": {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.1)" },
+          "100%": { transform: "scale(1)" },
+        },
+        "achievement-unlock": {
+          "0%": { transform: "translateY(-20px)", opacity: "0" },
+          "50%": { transform: "translateY(10px)", opacity: "0.5" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        "download-bounce": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
         }
       },
       animation: {
@@ -98,8 +112,13 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.5s ease-out forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
-        "pulse-ring": "pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-        "move-along-path": "move-along-path 15s linear infinite"
+        "notification-slide": "notification-slide 5s ease-in-out",
+        "route-dot": "route-dot 10s linear infinite",
+        "recommendation-pop": "recommendation-pop 0.5s ease-out forwards",
+        "summary-rotate": "summary-rotate 1s ease-in-out",
+        "health-pulse": "health-pulse 2s infinite",
+        "achievement-unlock": "achievement-unlock 0.8s ease-out forwards",
+        "download-bounce": "download-bounce 2s ease-in-out infinite"
       },
     },
   },

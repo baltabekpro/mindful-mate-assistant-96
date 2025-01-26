@@ -8,7 +8,7 @@ export const AchievementsSlide = () => {
         <h2 className="text-3xl font-bold text-center">Достижения и Челленджи</h2>
         
         <div className="grid grid-cols-2 gap-6">
-          <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm space-y-4">
+          <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm space-y-4 animate-achievement-unlock">
             <div className="flex items-center space-x-3">
               <Trophy className="h-6 w-6 text-yellow-400" />
               <h3 className="text-xl font-semibold">Достижения</h3>
@@ -29,7 +29,7 @@ export const AchievementsSlide = () => {
             </div>
           </div>
           
-          <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm space-y-4">
+          <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm space-y-4 animate-achievement-unlock [animation-delay:200ms]">
             <div className="flex items-center space-x-3">
               <Target className="h-6 w-6 text-blue-400" />
               <h3 className="text-xl font-semibold">Активные челленджи</h3>
@@ -58,7 +58,7 @@ export const AchievementsSlide = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-6">
-          <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm flex items-center space-x-4">
+          <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm flex items-center space-x-4 animate-achievement-unlock [animation-delay:400ms]">
             <Users className="h-8 w-8 text-purple-400" />
             <div>
               <h4 className="font-semibold">Социальные достижения</h4>
@@ -66,7 +66,7 @@ export const AchievementsSlide = () => {
             </div>
           </div>
           
-          <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm flex items-center space-x-4">
+          <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm flex items-center space-x-4 animate-achievement-unlock [animation-delay:600ms]">
             <Calendar className="h-8 w-8 text-green-400" />
             <div>
               <h4 className="font-semibold">Календарь активностей</h4>
