@@ -1,4 +1,4 @@
-import { Coffee, ShoppingBag, Home, Briefcase, School, Activity } from "lucide-react";
+import { Coffee, ShoppingBag, Home, Briefcase, School, Activity, MapPin, Route, Navigation } from "lucide-react";
 import { CarouselItem } from "@/components/ui/carousel";
 
 export const RouteAnalysisSlide = () => {
@@ -90,6 +90,42 @@ export const RouteAnalysisSlide = () => {
               <span className="text-lg font-semibold">3 места</span>
             </div>
             <p className="text-sm text-gray-300 mt-1">Посещено</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-6">
+          <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+            <div className="flex items-center space-x-3 mb-3">
+              <Navigation className="h-6 w-6 text-blue-400" />
+              <h3 className="font-semibold">Популярные места</h3>
+            </div>
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span>Офис</span>
+                <span className="text-sm text-blue-400">5 раз/неделю</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Спортзал</span>
+                <span className="text-sm text-blue-400">3 раза/неделю</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+            <div className="flex items-center space-x-3 mb-3">
+              <Route className="h-6 w-6 text-green-400" />
+              <h3 className="font-semibold">Рекомендации</h3>
+            </div>
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span>Новый парк</span>
+                <span className="text-sm text-green-400">+2км к прогулке</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Велодорожка</span>
+                <span className="text-sm text-green-400">Доступна</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

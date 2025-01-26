@@ -15,9 +15,9 @@ const Index = () => {
           <MainSlide />
           <NotificationsSlide />
           <RouteAnalysisSlide />
-          <AchievementsSlide />
           <DailySummarySlide />
           <HealthTrackerSlide />
+          <AchievementsSlide />
           <FinalSlide />
         </CarouselContent>
       </Carousel>
