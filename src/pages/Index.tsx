@@ -1,10 +1,30 @@
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { Activity, MapPin, Heart, Sun, Brain, Bell, Clock, Home, Briefcase, School, Phone, MessageSquare, Route } from "lucide-react";
+import { 
+  Activity, 
+  MapPin, 
+  Heart, 
+  Sun, 
+  Brain, 
+  Bell, 
+  Clock, 
+  Home, 
+  Briefcase, 
+  School, 
+  Phone, 
+  MessageSquare, 
+  Route,
+  ListCheck,
+  Calendar,
+  HeartPulse,
+  Thermometer,
+  AlertCircle,
+  Ambulance
+} from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-[#243949] to-[#517fa4]">
-      <Carousel className="w-full" opts={{ loop: true, align: "start" }} autoplay>
+      <Carousel className="w-full" opts={{ loop: true, align: "start" }}>
         <CarouselContent>
           {/* Главный слайд */}
           <CarouselItem className="h-screen flex items-center justify-center">
@@ -98,40 +118,131 @@ const Index = () => {
             </div>
           </CarouselItem>
 
-          {/* Анализ использования приложений */}
+          {/* Итоги дня и план на завтра */}
           <CarouselItem className="h-screen flex items-center justify-center">
             <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center">Анализ использования приложений</h2>
               <div className="grid grid-cols-2 gap-8">
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
                   <div className="flex items-center gap-4 mb-4">
-                    <Phone className="h-8 w-8 text-blue-400" />
-                    <div>
-                      <h3 className="text-lg font-semibold">Социальные сети</h3>
-                      <p className="text-red-400">3 часа (больше нормы)</p>
-                    </div>
+                    <ListCheck className="h-8 w-8 text-green-400" />
+                    <h3 className="text-xl font-semibold">Итоги дня</h3>
                   </div>
-                  <div className="relative h-2 bg-gray-700 rounded-full">
-                    <div className="absolute h-full w-3/4 bg-red-400 rounded-full animate-pulse" />
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <Clock className="h-5 w-5 text-blue-400" />
+                      <span>8 часов продуктивной работы</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Activity className="h-5 w-5 text-green-400" />
+                      <span>12,000 шагов пройдено</span>
+                    </div>
                   </div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up [animation-delay:200ms]">
                   <div className="flex items-center gap-4 mb-4">
-                    <MessageSquare className="h-8 w-8 text-green-400" />
-                    <div>
-                      <h3 className="text-lg font-semibold">Рабочие приложения</h3>
-                      <p className="text-green-400">6 часов (в норме)</p>
-                    </div>
+                    <Calendar className="h-8 w-8 text-purple-400" />
+                    <h3 className="text-xl font-semibold">План на завтра</h3>
                   </div>
-                  <div className="relative h-2 bg-gray-700 rounded-full">
-                    <div className="absolute h-full w-1/2 bg-green-400 rounded-full animate-pulse" />
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <Clock className="h-5 w-5 text-yellow-400" />
+                      <span>Встреча в 10:00</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Sun className="h-5 w-5 text-orange-400" />
+                      <span>Прогулка в парке (хорошая погода)</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
-                <p className="text-lg text-center">
-                  ИИ рекомендует: Сократите время в социальных сетях на 1 час и добавьте активности на свежем воздухе 🌳
-                </p>
+            </div>
+          </CarouselItem>
+
+          {/* Трекер здоровья и выгорания */}
+          <CarouselItem className="h-screen flex items-center justify-center">
+            <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 gap-8">
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
+                  <div className="flex items-center gap-4 mb-4">
+                    <HeartPulse className="h-8 w-8 text-red-400" />
+                    <h3 className="text-xl font-semibold">Трекер здоровья</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <Thermometer className="h-5 w-5 text-green-400" />
+                      <span>Температура: 36.6°C</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Activity className="h-5 w-5 text-blue-400" />
+                      <span>Давление: 120/80</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up [animation-delay:200ms]">
+                  <div className="flex items-center gap-4 mb-4">
+                    <Brain className="h-8 w-8 text-yellow-400" />
+                    <h3 className="text-xl font-semibold">Трекер выгорания</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="relative h-2 bg-gray-700 rounded-full mb-2">
+                      <div className="absolute h-full w-3/4 bg-yellow-400 rounded-full" />
+                    </div>
+                    <p className="text-yellow-400">Уровень стресса: Повышенный</p>
+                    <p>Рекомендация: Сделайте перерыв на медитацию</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CarouselItem>
+
+          {/* Анализ сердцебиения */}
+          <CarouselItem className="h-screen flex items-center justify-center">
+            <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
+                <div className="flex items-center gap-4 mb-4">
+                  <Heart className="h-8 w-8 text-red-400 animate-pulse" />
+                  <h3 className="text-xl font-semibold">Анализ сердцебиения</h3>
+                </div>
+                
+                <div className="relative h-40 mb-6">
+                  <svg className="w-full h-full" viewBox="0 0 400 100">
+                    <path
+                      d="M0,50 Q50,0 100,50 T200,50 T300,50 T400,50"
+                      fill="none"
+                      stroke="rgba(239, 68, 68, 0.5)"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M0,50 Q50,0 100,50 T200,50 T300,50 T400,50"
+                      fill="none"
+                      stroke="#EF4444"
+                      strokeWidth="2"
+                      className="animate-pulse"
+                    />
+                  </svg>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2">
+                    <AlertCircle className="h-5 w-5 text-red-400" />
+                    <span>Частота пульса: 120 уд/мин (Повышенная)</span>
+                  </div>
+                  
+                  <div className="bg-red-500/20 p-4 rounded-lg">
+                    <div className="flex items-center gap-4 mb-2">
+                      <Ambulance className="h-6 w-6 text-red-400" />
+                      <span className="font-semibold">Рекомендация:</span>
+                    </div>
+                    <p>Обратитесь в ближайший медпункт:</p>
+                    <div className="flex items-center gap-2 mt-2">
+                      <MapPin className="h-5 w-5 text-blue-400" />
+                      <span>Медицинский центр "Здоровье"</span>
+                    </div>
+                    <p className="text-sm text-gray-300 ml-7">ул. Ленина, 42 (500м от вас)</p>
+                  </div>
+                </div>
               </div>
             </div>
           </CarouselItem>
