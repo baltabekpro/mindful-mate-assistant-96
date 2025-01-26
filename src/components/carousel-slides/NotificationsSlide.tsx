@@ -6,10 +6,10 @@ export const NotificationsSlide = () => {
     <CarouselItem className="h-screen flex items-center justify-center">
       <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative animate-fade-in">
+          <div className="opacity-0 animate-drop-in [animation-delay:200ms]">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
               <div className="flex items-center gap-4 mb-4">
-                <Heart className="h-8 w-8 text-red-400 animate-pulse" />
+                <Heart className="h-8 w-8 text-red-400 animate-heart-beat" />
                 <div>
                   <h3 className="text-lg font-semibold">Срочное уведомление</h3>
                   <p className="text-sm text-gray-300">2 минуты назад</p>
@@ -28,7 +28,7 @@ export const NotificationsSlide = () => {
             </div>
           </div>
 
-          <div className="relative animate-fade-in [animation-delay:200ms]">
+          <div className="opacity-0 animate-drop-in [animation-delay:400ms]">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
               <div className="flex items-center gap-4 mb-4">
                 <Bell className="h-8 w-8 text-blue-400" />
@@ -53,7 +53,7 @@ export const NotificationsSlide = () => {
             </div>
           </div>
 
-          <div className="relative animate-fade-in [animation-delay:400ms]">
+          <div className="opacity-0 animate-drop-in [animation-delay:600ms]">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
               <div className="flex items-center gap-4 mb-4">
                 <AlertTriangle className="h-8 w-8 text-yellow-400" />
