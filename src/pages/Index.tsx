@@ -3,7 +3,8 @@ import {
   Activity, MapPin, Heart, Sun, Brain, Bell, Clock, 
   Home, Briefcase, School, Phone, MessageSquare, Route,
   ListCheck, Calendar, HeartPulse, Thermometer, AlertCircle,
-  Ambulance, Film, Music, Apple, PlaySquare
+  Ambulance, Film, Music, Apple, PlaySquare, Coffee, ShoppingBag,
+  Utensils, Book
 } from "lucide-react";
 
 const Index = () => {
@@ -26,143 +27,175 @@ const Index = () => {
             </div>
           </CarouselItem>
 
-        {/* Уведомления и рекомендации */}
-        <CarouselItem className="h-screen flex items-center justify-center">
-          <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="relative animate-fade-in">
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Bell className="h-8 w-8 text-blue-400 animate-pulse" />
-                    <div>
-                      <h3 className="text-lg font-semibold">Рекомендация от ИИ</h3>
-                      <p className="text-sm text-gray-300">Сейчас</p>
+          {/* Уведомления и рекомендации */}
+          <CarouselItem className="h-screen flex items-center justify-center">
+            <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="relative animate-fade-in">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
+                    <div className="flex items-center gap-4 mb-4">
+                      <Bell className="h-8 w-8 text-blue-400 animate-pulse" />
+                      <div>
+                        <h3 className="text-lg font-semibold">Рекомендация от ИИ</h3>
+                        <p className="text-sm text-gray-300">Сейчас</p>
+                      </div>
                     </div>
-                  </div>
-                  <p className="text-lg">
-                    Отличная погода для прогулки! 🌞
-                    <br />
-                    Температура: 22°C
-                    <br />
-                    Качество воздуха: Отличное
-                    <br />
-                    Рекомендую посетить парк Президента
-                  </p>
-                  <div className="mt-4 flex items-center gap-2">
-                    <Sun className="h-5 w-5 text-yellow-400" />
-                    <span className="text-sm">Идеальные условия для прогулки</span>
+                    <p className="text-lg">
+                      Отличная погода для прогулки! 🌞
+                      <br />
+                      Температура: 22°C
+                      <br />
+                      Качество воздуха: Отличное
+                      <br />
+                      Рекомендую посетить парк Президента
+                    </p>
+                    <div className="mt-4 flex items-center gap-2">
+                      <Sun className="h-5 w-5 text-yellow-400" />
+                      <span className="text-sm">Идеальные условия для прогулки</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="relative animate-fade-in [animation-delay:200ms]">
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Film className="h-8 w-8 text-purple-400" />
-                    <div>
-                      <h3 className="text-lg font-semibold">Вечерний досуг</h3>
-                      <p className="text-sm text-gray-300">Основано на ваших привычках</p>
+                <div className="relative animate-fade-in [animation-delay:200ms]">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
+                    <div className="flex items-center gap-4 mb-4">
+                      <Film className="h-8 w-8 text-purple-400" />
+                      <div>
+                        <h3 className="text-lg font-semibold">Вечерний досуг</h3>
+                        <p className="text-sm text-gray-300">Основано на ваших привычках</p>
+                      </div>
                     </div>
+                    <p className="text-lg">
+                      Время для вечернего фильма! 🎬
+                      <br />
+                      Рекомендуем посмотреть:
+                      <br />
+                      "Inception" - Научная фантастика
+                    </p>
                   </div>
-                  <p className="text-lg">
-                    Время для вечернего фильма! 🎬
-                    <br />
-                    Рекомендуем посмотреть:
-                    <br />
-                    "Inception" - Научная фантастика
-                  </p>
                 </div>
-              </div>
 
-              <div className="relative animate-fade-in [animation-delay:400ms]">
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Music className="h-8 w-8 text-green-400" />
-                    <div>
-                      <h3 className="text-lg font-semibold">Утренний плейлист</h3>
-                      <p className="text-sm text-gray-300">Для поездки на работу</p>
+                <div className="relative animate-fade-in [animation-delay:400ms]">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
+                    <div className="flex items-center gap-4 mb-4">
+                      <Music className="h-8 w-8 text-green-400" />
+                      <div>
+                        <h3 className="text-lg font-semibold">Утренний плейлист</h3>
+                        <p className="text-sm text-gray-300">Для поездки на работу</p>
+                      </div>
                     </div>
+                    <p className="text-lg">
+                      Новый плейлист готов! 🎵
+                      <br />
+                      Подборка энергичных треков
+                      <br />
+                      для продуктивного начала дня
+                    </p>
                   </div>
-                  <p className="text-lg">
-                    Новый плейлист готов! 🎵
-                    <br />
-                    Подборка энергичных треков
-                    <br />
-                    для продуктивного начала дня
-                  </p>
                 </div>
               </div>
             </div>
-          </div>
-        </CarouselItem>
+          </CarouselItem>
 
-        {/* Анализ маршрутов */}
-        <CarouselItem className="h-screen flex items-center justify-center">
-          <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center">Анализ ваших маршрутов</h2>
-            <div className="relative h-64 animate-fade-in">
-              <svg className="absolute w-full h-full" viewBox="0 0 400 300">
-                {/* Путь для анимации */}
-                <path
-                  d="M50,150 L200,50 L350,150"
-                  stroke="rgba(255,255,255,0.2)"
-                  strokeWidth="2"
-                  fill="none"
-                  id="motionPath"
-                />
-                
-                {/* Маркеры локаций */}
-                <g transform="translate(50,150)">
-                  <circle r="5" fill="#4ade80"/>
-                  <Home className="h-8 w-8 text-green-400" />
-                  <text x="10" y="25" fill="white">Дом</text>
-                </g>
-                
-                <g transform="translate(200,50)">
-                  <circle r="5" fill="#facc15"/>
-                  <Briefcase className="h-8 w-8 text-yellow-400" />
-                  <text x="10" y="25" fill="white">Работа</text>
-                </g>
-                
-                <g transform="translate(350,150)">
-                  <circle r="5" fill="#a78bfa"/>
-                  <School className="h-8 w-8 text-purple-400" />
-                  <text x="10" y="25" fill="white">Учёба</text>
-                </g>
+          {/* Анализ маршрутов с улучшенным SVG */}
+          <CarouselItem className="h-screen flex items-center justify-center">
+            <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center">Анализ ваших маршрутов</h2>
+              <div className="relative h-96 animate-fade-in">
+                <svg className="absolute w-full h-full" viewBox="0 0 400 400">
+                  {/* Фоновая сетка */}
+                  <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="0.5"/>
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#grid)" />
 
-                {/* Анимированная точка */}
-                <circle r="4" fill="white">
-                  <animateMotion
-                    dur="15s"
-                    repeatCount="indefinite"
-                    path="M50,150 L200,50 L350,150"
-                    keyPoints="0;0.33;0.66;1"
-                    keyTimes="0;0.33;0.66;1"
+                  {/* Основной путь маршрута */}
+                  <path
+                    d="M50,200 C100,150 150,150 200,200 S300,250 350,200"
+                    stroke="rgba(255,255,255,0.2)"
+                    strokeWidth="3"
+                    fill="none"
+                    id="mainPath"
                   />
-                </circle>
-              </svg>
-            </div>
-            
+
+                  {/* Дополнительные точки интереса */}
+                  <g transform="translate(125,175)">
+                    <circle r="4" fill="#60a5fa"/>
+                    <Coffee className="h-6 w-6 text-blue-400" />
+                    <text x="10" y="20" fill="white" className="text-xs">Кофейня</text>
+                  </g>
+
+                  <g transform="translate(275,225)">
+                    <circle r="4" fill="#34d399"/>
+                    <ShoppingBag className="h-6 w-6 text-green-400" />
+                    <text x="10" y="20" fill="white" className="text-xs">Магазин</text>
+                  </g>
+
+                  {/* Основные локации */}
+                  <g transform="translate(50,200)">
+                    <circle r="6" fill="#4ade80"/>
+                    <Home className="h-8 w-8 text-green-400" />
+                    <text x="10" y="25" fill="white">Дом</text>
+                  </g>
+                  
+                  <g transform="translate(200,200)">
+                    <circle r="6" fill="#facc15"/>
+                    <Briefcase className="h-8 w-8 text-yellow-400" />
+                    <text x="10" y="25" fill="white">Работа</text>
+                  </g>
+                  
+                  <g transform="translate(350,200)">
+                    <circle r="6" fill="#a78bfa"/>
+                    <School className="h-8 w-8 text-purple-400" />
+                    <text x="10" y="25" fill="white">Учёба</text>
+                  </g>
+
+                  {/* Анимированная точка */}
+                  <circle r="4" fill="white" className="animate-move-along-path">
+                    <animateMotion
+                      dur="15s"
+                      repeatCount="indefinite"
+                      path="M50,200 C100,150 150,150 200,200 S300,250 350,200"
+                      keyPoints="0;0.33;0.66;1"
+                      keyTimes="0;0.33;0.66;1"
+                    >
+                      <mpath href="#mainPath" />
+                    </animateMotion>
+                  </circle>
+
+                  {/* Пульсирующие индикаторы остановок */}
+                  <circle cx="50" cy="200" r="8" className="animate-pulse-ring" 
+                    fill="none" stroke="#4ade80" strokeWidth="2" />
+                  <circle cx="200" cy="200" r="8" className="animate-pulse-ring" 
+                    fill="none" stroke="#facc15" strokeWidth="2" />
+                  <circle cx="350" cy="200" r="8" className="animate-pulse-ring" 
+                    fill="none" stroke="#a78bfa" strokeWidth="2" />
+                </svg>
+              </div>
+              
               <div className="grid grid-cols-3 gap-4 text-center">
-                <div className="bg-white/10 p-4 rounded-lg">
+                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
                   <Clock className="h-6 w-6 mx-auto mb-2 text-blue-400" />
                   <p>8 часов</p>
                   <p className="text-sm text-gray-300">Дома</p>
                 </div>
-                <div className="bg-white/10 p-4 rounded-lg">
+                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
                   <Clock className="h-6 w-6 mx-auto mb-2 text-yellow-400" />
                   <p>9 часов</p>
                   <p className="text-sm text-gray-300">На работе</p>
                 </div>
-                <div className="bg-white/10 p-4 rounded-lg">
+                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
                   <Clock className="h-6 w-6 mx-auto mb-2 text-purple-400" />
                   <p>3 часа</p>
                   <p className="text-sm text-gray-300">На учёбе</p>
                 </div>
               </div>
-          </div>
-        </CarouselItem>
+            </div>
+          </CarouselItem>
 
+          {/* Итоги дня */}
           <CarouselItem className="h-screen flex items-center justify-center">
             <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
               <div className="grid grid-cols-2 gap-8">
@@ -203,6 +236,7 @@ const Index = () => {
             </div>
           </CarouselItem>
 
+          {/* Трекер здоровья */}
           <CarouselItem className="h-screen flex items-center justify-center">
             <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
               <div className="grid grid-cols-2 gap-8">
@@ -240,6 +274,7 @@ const Index = () => {
             </div>
           </CarouselItem>
 
+          {/* Анализ сердцебиения */}
           <CarouselItem className="h-screen flex items-center justify-center">
             <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">

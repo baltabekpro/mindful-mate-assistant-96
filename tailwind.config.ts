@@ -70,10 +70,6 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        "moveAlongPath": {
-          "0%": { offsetDistance: "0%" },
-          "100%": { offsetDistance: "100%" },
-        },
         "pulse-ring": {
           "0%": { transform: "scale(0.8)", opacity: "1" },
           "100%": { transform: "scale(2)", opacity: "0" },
@@ -81,19 +77,19 @@ export default {
         "move-along-path": {
           "0%": { 
             offsetDistance: "0%",
-            offsetRotate: "0deg"
+            offsetRotate: "auto"
           },
           "33%": { 
             offsetDistance: "33%",
-            offsetRotate: "0deg"
+            offsetRotate: "auto"
           },
           "66%": { 
             offsetDistance: "66%",
-            offsetRotate: "0deg"
+            offsetRotate: "auto"
           },
           "100%": { 
             offsetDistance: "100%",
-            offsetRotate: "0deg"
+            offsetRotate: "auto"
           }
         }
       },
