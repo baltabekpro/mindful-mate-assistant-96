@@ -6,7 +6,7 @@ export const HealthTrackerSlide = () => {
     <CarouselItem className="h-screen flex items-center justify-center">
       <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
         <div className="grid grid-cols-2 gap-8">
-          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-health-pulse">
+          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
             <div className="flex items-center gap-4 mb-4">
               <HeartPulse className="h-8 w-8 text-red-400" />
               <h3 className="text-xl font-semibold">Мониторинг здоровья</h3>
@@ -51,7 +51,7 @@ export const HealthTrackerSlide = () => {
             </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-health-pulse [animation-delay:200ms]">
+          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up [animation-delay:200ms]">
             <div className="flex items-center gap-4 mb-4">
               <Brain className="h-8 w-8 text-yellow-400" />
               <h3 className="text-xl font-semibold">Анализ состояния</h3>
