@@ -7,7 +7,6 @@ import { DailySummarySlide } from "@/components/carousel-slides/DailySummarySlid
 import { HealthTrackerSlide } from "@/components/carousel-slides/HealthTrackerSlide";
 import { AchievementsSlide } from "@/components/carousel-slides/AchievementsSlide";
 import { FinalSlide } from "@/components/carousel-slides/FinalSlide";
-import RecordPresentation from "@/components/RecordPresentation";
 
 const Index = () => {
   return (
@@ -24,7 +23,6 @@ const Index = () => {
           <FinalSlide />
         </CarouselContent>
       </Carousel>
-      <RecordPresentation />
     </div>
   );
 };
