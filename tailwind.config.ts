@@ -77,6 +77,24 @@ export default {
         "pulse-ring": {
           "0%": { transform: "scale(0.8)", opacity: "1" },
           "100%": { transform: "scale(2)", opacity: "0" },
+        },
+        "move-along-path": {
+          "0%": { 
+            offsetDistance: "0%",
+            offsetRotate: "0deg"
+          },
+          "33%": { 
+            offsetDistance: "33%",
+            offsetRotate: "0deg"
+          },
+          "66%": { 
+            offsetDistance: "66%",
+            offsetRotate: "0deg"
+          },
+          "100%": { 
+            offsetDistance: "100%",
+            offsetRotate: "0deg"
+          }
         }
       },
       animation: {
@@ -85,6 +103,7 @@ export default {
         "fade-up": "fade-up 0.5s ease-out forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
         "pulse-ring": "pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "move-along-path": "move-along-path 15s linear infinite"
       },
     },
   },

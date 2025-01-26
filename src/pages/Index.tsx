@@ -1,31 +1,15 @@
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { 
-  Activity, 
-  MapPin, 
-  Heart, 
-  Sun, 
-  Brain, 
-  Bell, 
-  Clock, 
-  Home, 
-  Briefcase, 
-  School, 
-  Phone, 
-  MessageSquare, 
-  Route,
-  ListCheck,
-  Calendar,
-  HeartPulse,
-  Thermometer,
-  AlertCircle,
-  Ambulance
+  Activity, MapPin, Heart, Sun, Brain, Bell, Clock, 
+  Home, Briefcase, School, Phone, MessageSquare, Route,
+  ListCheck, Calendar, HeartPulse, Thermometer, AlertCircle,
+  Ambulance, Film, Music, Apple, PlaySquare
 } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-[#243949] to-[#517fa4]">
-      <Carousel className="w-full" opts={{ loop: true, align: "start" }}>
-        <CarouselContent>
+      <Carousel className="w-full" opts={{ loop: true, align: "start" }} autoplay>
           {/* Главный слайд */}
           <CarouselItem className="h-screen flex items-center justify-center">
             <div className="text-center text-white space-y-6 animate-fade-up p-8">
@@ -41,9 +25,10 @@ const Index = () => {
             </div>
           </CarouselItem>
 
-          {/* Уведомления и рекомендации */}
-          <CarouselItem className="h-screen flex items-center justify-center">
-            <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
+        {/* Уведомления и рекомендации */}
+        <CarouselItem className="h-screen flex items-center justify-center">
+          <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative animate-fade-in">
                 <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
                   <div className="flex items-center gap-4 mb-4">
@@ -68,36 +53,95 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </CarouselItem>
 
-          {/* Анализ маршрутов */}
-          <CarouselItem className="h-screen flex items-center justify-center">
-            <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center">Анализ ваших маршрутов</h2>
-              <div className="relative h-64 animate-fade-in">
-                <div className="absolute w-full h-full">
-                  <Route className="absolute h-full w-full text-blue-400 opacity-20" />
-                  <div className="absolute left-1/4 top-1/4 animate-pulse">
-                    <Home className="h-8 w-8 text-green-400" />
-                    <span className="text-sm">Дом</span>
+              <div className="relative animate-fade-in [animation-delay:200ms]">
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
+                  <div className="flex items-center gap-4 mb-4">
+                    <Film className="h-8 w-8 text-purple-400" />
+                    <div>
+                      <h3 className="text-lg font-semibold">Вечерний досуг</h3>
+                      <p className="text-sm text-gray-300">Основано на ваших привычках</p>
+                    </div>
                   </div>
-                  <div className="absolute left-1/2 top-1/2 animate-pulse">
-                    <Briefcase className="h-8 w-8 text-yellow-400" />
-                    <span className="text-sm">Работа</span>
-                  </div>
-                  <div className="absolute right-1/4 bottom-1/4 animate-pulse">
-                    <School className="h-8 w-8 text-purple-400" />
-                    <span className="text-sm">Учёба</span>
-                  </div>
-                  <div 
-                    className="absolute h-4 w-4 bg-white rounded-full animate-[moveAlongPath_10s_linear_infinite]"
-                    style={{
-                      offsetPath: "path('M100,100 L200,200 L300,150 L400,300')",
-                    }}
-                  />
+                  <p className="text-lg">
+                    Время для вечернего фильма! 🎬
+                    <br />
+                    Рекомендуем посмотреть:
+                    <br />
+                    "Inception" - Научная фантастика
+                  </p>
                 </div>
               </div>
+
+              <div className="relative animate-fade-in [animation-delay:400ms]">
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-xl">
+                  <div className="flex items-center gap-4 mb-4">
+                    <Music className="h-8 w-8 text-green-400" />
+                    <div>
+                      <h3 className="text-lg font-semibold">Утренний плейлист</h3>
+                      <p className="text-sm text-gray-300">Для поездки на работу</p>
+                    </div>
+                  </div>
+                  <p className="text-lg">
+                    Новый плейлист готов! 🎵
+                    <br />
+                    Подборка энергичных треков
+                    <br />
+                    для продуктивного начала дня
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CarouselItem>
+
+        {/* Анализ маршрутов */}
+        <CarouselItem className="h-screen flex items-center justify-center">
+          <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center">Анализ ваших маршрутов</h2>
+            <div className="relative h-64 animate-fade-in">
+              <svg className="absolute w-full h-full" viewBox="0 0 400 300">
+                {/* Путь для анимации */}
+                <path
+                  d="M50,150 L200,50 L350,150"
+                  stroke="rgba(255,255,255,0.2)"
+                  strokeWidth="2"
+                  fill="none"
+                  id="motionPath"
+                />
+                
+                {/* Маркеры локаций */}
+                <g transform="translate(50,150)">
+                  <circle r="5" fill="#4ade80"/>
+                  <Home className="h-8 w-8 text-green-400" />
+                  <text x="10" y="25" fill="white">Дом</text>
+                </g>
+                
+                <g transform="translate(200,50)">
+                  <circle r="5" fill="#facc15"/>
+                  <Briefcase className="h-8 w-8 text-yellow-400" />
+                  <text x="10" y="25" fill="white">Работа</text>
+                </g>
+                
+                <g transform="translate(350,150)">
+                  <circle r="5" fill="#a78bfa"/>
+                  <School className="h-8 w-8 text-purple-400" />
+                  <text x="10" y="25" fill="white">Учёба</text>
+                </g>
+
+                {/* Анимированная точка */}
+                <circle r="4" fill="white">
+                  <animateMotion
+                    dur="15s"
+                    repeatCount="indefinite"
+                    path="M50,150 L200,50 L350,150"
+                    keyPoints="0;0.33;0.66;1"
+                    keyTimes="0;0.33;0.66;1"
+                  />
+                </circle>
+              </svg>
+            </div>
+            
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div className="bg-white/10 p-4 rounded-lg">
                   <Clock className="h-6 w-6 mx-auto mb-2 text-blue-400" />
@@ -115,10 +159,9 @@ const Index = () => {
                   <p className="text-sm text-gray-300">На учёбе</p>
                 </div>
               </div>
-            </div>
-          </CarouselItem>
+          </div>
+        </CarouselItem>
 
-          {/* Итоги дня и план на завтра */}
           <CarouselItem className="h-screen flex items-center justify-center">
             <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
               <div className="grid grid-cols-2 gap-8">
@@ -159,7 +202,6 @@ const Index = () => {
             </div>
           </CarouselItem>
 
-          {/* Трекер здоровья и выгорания */}
           <CarouselItem className="h-screen flex items-center justify-center">
             <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
               <div className="grid grid-cols-2 gap-8">
@@ -197,7 +239,6 @@ const Index = () => {
             </div>
           </CarouselItem>
 
-          {/* Анализ сердцебиения */}
           <CarouselItem className="h-screen flex items-center justify-center">
             <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
@@ -247,24 +288,30 @@ const Index = () => {
             </div>
           </CarouselItem>
 
-          {/* Финальный слайд */}
-          <CarouselItem className="h-screen flex items-center justify-center">
-            <div className="text-center text-white space-y-8 p-8 animate-fade-up">
-              <h2 className="text-5xl font-bold">
-                Начните Использовать Прямо Сейчас
-              </h2>
-              <p className="text-2xl text-gray-200 max-w-2xl mx-auto">
-                Доступно для iOS и Android
-              </p>
-              <div className="flex justify-center gap-8">
-                <img src="/app-store.png" alt="App Store" className="h-16" />
-                <img src="/play-store.png" alt="Play Store" className="h-16" />
+        {/* Финальный слайд */}
+        <CarouselItem className="h-screen flex items-center justify-center">
+          <div className="text-center text-white space-y-8 p-8 animate-fade-up">
+            <h2 className="text-5xl font-bold">
+              Начните Использовать Прямо Сейчас
+            </h2>
+            <p className="text-2xl text-gray-200 max-w-2xl mx-auto">
+              Доступно для iOS и Android
+            </p>
+            <div className="flex justify-center gap-8">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg rounded-lg p-4">
+                <Apple className="h-8 w-8" />
+                <span>App Store</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-lg rounded-lg p-4">
+                <PlaySquare className="h-8 w-8" />
+                <span>Play Market</span>
               </div>
             </div>
-          </CarouselItem>
-        </CarouselContent>
-      </Carousel>
-    </div>
+          </div>
+        </CarouselItem>
+      </CarouselContent>
+    </Carousel>
+  </div>
   );
 };
 
