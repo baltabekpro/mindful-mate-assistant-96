@@ -122,38 +122,28 @@ const Index = () => {
 
                   {/* Дополнительные точки интереса */}
                   <g transform="translate(125,175)">
-                    <circle r="4" fill="#60a5fa"/>
                     <Coffee className="h-6 w-6 text-blue-400" />
-                    <text x="10" y="20" fill="white" className="text-xs">Кофейня</text>
                   </g>
 
                   <g transform="translate(275,225)">
-                    <circle r="4" fill="#34d399"/>
                     <ShoppingBag className="h-6 w-6 text-green-400" />
-                    <text x="10" y="20" fill="white" className="text-xs">Магазин</text>
                   </g>
 
                   {/* Основные локации */}
                   <g transform="translate(50,200)">
-                    <circle r="6" fill="#4ade80"/>
                     <Home className="h-8 w-8 text-green-400" />
-                    <text x="10" y="25" fill="white">Дом</text>
                   </g>
                   
                   <g transform="translate(200,200)">
-                    <circle r="6" fill="#facc15"/>
                     <Briefcase className="h-8 w-8 text-yellow-400" />
-                    <text x="10" y="25" fill="white">Работа</text>
                   </g>
                   
                   <g transform="translate(350,200)">
-                    <circle r="6" fill="#a78bfa"/>
                     <School className="h-8 w-8 text-purple-400" />
-                    <text x="10" y="25" fill="white">Учёба</text>
                   </g>
 
                   {/* Анимированная точка */}
-                  <circle r="4" fill="white" className="animate-move-along-path">
+                  <circle r="4" fill="white">
                     <animateMotion
                       dur="15s"
                       repeatCount="indefinite"
@@ -164,14 +154,6 @@ const Index = () => {
                       <mpath href="#mainPath" />
                     </animateMotion>
                   </circle>
-
-                  {/* Пульсирующие индикаторы остановок */}
-                  <circle cx="50" cy="200" r="8" className="animate-pulse-ring" 
-                    fill="none" stroke="#4ade80" strokeWidth="2" />
-                  <circle cx="200" cy="200" r="8" className="animate-pulse-ring" 
-                    fill="none" stroke="#facc15" strokeWidth="2" />
-                  <circle cx="350" cy="200" r="8" className="animate-pulse-ring" 
-                    fill="none" stroke="#a78bfa" strokeWidth="2" />
                 </svg>
               </div>
               
