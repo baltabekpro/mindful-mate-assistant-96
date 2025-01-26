@@ -70,6 +70,10 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "moveAlongPath": {
+          "0%": { offsetDistance: "0%" },
+          "100%": { offsetDistance: "100%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
