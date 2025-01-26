@@ -4,6 +4,7 @@ import { NotificationsSlide } from "@/components/carousel-slides/NotificationsSl
 import { RouteAnalysisSlide } from "@/components/carousel-slides/RouteAnalysisSlide";
 import { DailySummarySlide } from "@/components/carousel-slides/DailySummarySlide";
 import { HealthTrackerSlide } from "@/components/carousel-slides/HealthTrackerSlide";
+import { AchievementsSlide } from "@/components/carousel-slides/AchievementsSlide";
 import { FinalSlide } from "@/components/carousel-slides/FinalSlide";
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
           <MainSlide />
           <NotificationsSlide />
           <RouteAnalysisSlide />
+          <AchievementsSlide />
           <DailySummarySlide />
           <HealthTrackerSlide />
           <FinalSlide />

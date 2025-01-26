@@ -1,77 +1,95 @@
-import { Coffee, ShoppingBag, Home, Briefcase, School } from "lucide-react";
+import { Coffee, ShoppingBag, Home, Briefcase, School, Activity } from "lucide-react";
 import { CarouselItem } from "@/components/ui/carousel";
 
 export const RouteAnalysisSlide = () => {
   return (
     <CarouselItem className="h-screen flex items-center justify-center">
       <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center">Анализ ваших маршрутов</h2>
+        <h2 className="text-3xl font-bold text-center">Анализ маршрутов</h2>
         <div className="relative h-96 animate-fade-in">
           <svg className="absolute w-full h-full" viewBox="0 0 400 400">
             <defs>
+              <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style={{ stopColor: '#4F46E5', stopOpacity: 1 }} />
+                <stop offset="100%" style={{ stopColor: '#06B6D4', stopOpacity: 1 }} />
+              </linearGradient>
               <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
                 <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="0.5"/>
               </pattern>
             </defs>
+            
             <rect width="100%" height="100%" fill="url(#grid)" />
 
+            {/* Main route path */}
             <path
-              d="M50,200 C100,150 150,150 200,200 S300,250 350,200"
-              stroke="rgba(255,255,255,0.2)"
-              strokeWidth="3"
+              d="M50,200 Q125,100 200,200 T350,200"
+              stroke="url(#routeGradient)"
+              strokeWidth="4"
               fill="none"
               id="mainPath"
+              strokeLinecap="round"
+              strokeDasharray="5,5"
             />
 
-            <g transform="translate(125,175)">
-              <Coffee className="h-6 w-6 text-blue-400" />
-            </g>
-
-            <g transform="translate(275,225)">
-              <ShoppingBag className="h-6 w-6 text-green-400" />
-            </g>
-
+            {/* Location markers with subtle glow effects */}
             <g transform="translate(50,200)">
-              <Home className="h-8 w-8 text-green-400" />
+              <circle r="15" fill="rgba(34,197,94,0.2)" />
+              <Home className="h-6 w-6 text-green-400" style={{ transform: 'translate(-12px, -12px)' }} />
             </g>
             
             <g transform="translate(200,200)">
-              <Briefcase className="h-8 w-8 text-yellow-400" />
+              <circle r="15" fill="rgba(234,179,8,0.2)" />
+              <Briefcase className="h-6 w-6 text-yellow-400" style={{ transform: 'translate(-12px, -12px)' }} />
             </g>
             
             <g transform="translate(350,200)">
-              <School className="h-8 w-8 text-purple-400" />
+              <circle r="15" fill="rgba(168,85,247,0.2)" />
+              <School className="h-6 w-6 text-purple-400" style={{ transform: 'translate(-12px, -12px)' }} />
             </g>
 
-            <circle r="4" fill="white">
+            {/* Animated point moving along the path */}
+            <circle r="6" fill="white" filter="url(#glow)">
               <animateMotion
-                dur="15s"
+                dur="8s"
                 repeatCount="indefinite"
-                path="M50,200 C100,150 150,150 200,200 S300,250 350,200"
-                keyPoints="0;0.33;0.66;1"
-                keyTimes="0;0.33;0.66;1"
-              >
-                <mpath href="#mainPath" />
-              </animateMotion>
+                path="M50,200 Q125,100 200,200 T350,200"
+              />
             </circle>
+
+            {/* Glow filter */}
+            <defs>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
           </svg>
         </div>
         
-        <div className="grid grid-cols-3 gap-4 text-center">
+        <div className="grid grid-cols-3 gap-4">
           <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-            <Home className="h-6 w-6 mx-auto mb-2 text-green-400" />
-            <p>8 часов</p>
-            <p className="text-sm text-gray-300">Дома</p>
+            <div className="flex items-center justify-center space-x-2">
+              <Activity className="h-5 w-5 text-green-400" />
+              <span className="text-lg font-semibold">12 км</span>
+            </div>
+            <p className="text-sm text-gray-300 mt-1">Пройдено сегодня</p>
           </div>
           <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-            <Briefcase className="h-6 w-6 mx-auto mb-2 text-yellow-400" />
-            <p>9 часов</p>
-            <p className="text-sm text-gray-300">На работе</p>
+            <div className="flex items-center justify-center space-x-2">
+              <Activity className="h-5 w-5 text-yellow-400" />
+              <span className="text-lg font-semibold">45 мин</span>
+            </div>
+            <p className="text-sm text-gray-300 mt-1">В пути</p>
           </div>
           <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-            <School className="h-6 w-6 mx-auto mb-2 text-purple-400" />
-            <p>3 часа</p>
-            <p className="text-sm text-gray-300">На учёбе</p>
+            <div className="flex items-center justify-center space-x-2">
+              <Activity className="h-5 w-5 text-purple-400" />
+              <span className="text-lg font-semibold">3 места</span>
+            </div>
+            <p className="text-sm text-gray-300 mt-1">Посещено</p>
           </div>
         </div>
       </div>
