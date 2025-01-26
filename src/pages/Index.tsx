@@ -2,6 +2,7 @@ import { Carousel, CarouselContent } from "@/components/ui/carousel";
 import { MainSlide } from "@/components/carousel-slides/MainSlide";
 import { NotificationsSlide } from "@/components/carousel-slides/NotificationsSlide";
 import { RouteAnalysisSlide } from "@/components/carousel-slides/RouteAnalysisSlide";
+import { PersonalizedRecommendationsSlide } from "@/components/carousel-slides/PersonalizedRecommendationsSlide";
 import { DailySummarySlide } from "@/components/carousel-slides/DailySummarySlide";
 import { HealthTrackerSlide } from "@/components/carousel-slides/HealthTrackerSlide";
 import { AchievementsSlide } from "@/components/carousel-slides/AchievementsSlide";
@@ -15,6 +16,7 @@ const Index = () => {
           <MainSlide />
           <NotificationsSlide />
           <RouteAnalysisSlide />
+          <PersonalizedRecommendationsSlide />
           <DailySummarySlide />
           <HealthTrackerSlide />
           <AchievementsSlide />
