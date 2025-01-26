@@ -8,7 +8,7 @@ export const HealthTrackerSlide = () => {
         <div className="grid grid-cols-2 gap-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
             <div className="flex items-center gap-4 mb-4">
-              <HeartPulse className="h-8 w-8 text-red-400 animate-heart-beat" />
+              <HeartPulse className="h-8 w-8 text-red-400" />
               <h3 className="text-xl font-semibold">Мониторинг здоровья</h3>
             </div>
             <div className="space-y-4">

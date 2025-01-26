@@ -6,7 +6,7 @@ export const DailySummarySlide = () => {
     <CarouselItem className="h-screen flex items-center justify-center">
       <div className="text-white space-y-8 p-8 max-w-4xl mx-auto">
         <div className="grid grid-cols-2 gap-8">
-          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 opacity-0 animate-count-up">
+          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
             <div className="flex items-center gap-4 mb-4">
               <ListCheck className="h-8 w-8 text-green-400" />
               <h3 className="text-xl font-semibold">Итоги дня</h3>
@@ -23,7 +23,7 @@ export const DailySummarySlide = () => {
             </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 opacity-0 animate-count-up [animation-delay:200ms]">
+          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-fade-up">
             <div className="flex items-center gap-4 mb-4">
               <Calendar className="h-8 w-8 text-purple-400" />
               <h3 className="text-xl font-semibold">План на завтра</h3>
