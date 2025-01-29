@@ -68,7 +68,9 @@ const Investors = () => {
           Инвестиционные возможности MindfulMate
         </h1>
         <p className="text-2xl text-muted-foreground max-w-3xl mx-auto">
-          Присоединяйтесь к революции в сфере персонального благополучия и станьте частью будущего здравоохранения
+          Присоединяйтесь к революции в сфере персонального благополучия и станьте частью будущего здравоохранения. 
+          MindfulMate - это инновационная платформа, объединяющая передовые технологии искусственного интеллекта 
+          и научно обоснованные методики для создания персонализированных решений в области ментального здоровья.
         </p>
         <div className="relative w-fit mx-auto">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary via-purple-500 to-blue-600 rounded-lg blur opacity-30 animate-pulse" />
@@ -112,6 +114,55 @@ const Investors = () => {
             <p className="text-muted-foreground">Годовой рост выручки</p>
           </CardContent>
         </Card>
+      </div>
+
+      {/* Market Overview Section */}
+      <div className="space-y-8 mt-16">
+        <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+          Обзор рынка
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          <Card className="p-6 bg-gradient-to-br from-background to-accent/10">
+            <CardHeader>
+              <CardTitle className="text-2xl">Глобальные тренды</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-lg">
+                • Рост осознанности в отношении ментального здоровья среди миллениалов и поколения Z
+              </p>
+              <p className="text-lg">
+                • Увеличение корпоративных инвестиций в благополучие сотрудников
+              </p>
+              <p className="text-lg">
+                • Развитие телемедицины и дистанционных консультаций
+              </p>
+              <p className="text-lg">
+                • Интеграция ИИ в healthcare-решения
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="p-6 bg-gradient-to-br from-background to-accent/10">
+            <CardHeader>
+              <CardTitle className="text-2xl">Наши преимущества</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-lg">
+                • Уникальные алгоритмы персонализации на основе ИИ
+              </p>
+              <p className="text-lg">
+                • Научно обоснованные методики и сотрудничество с экспертами
+              </p>
+              <p className="text-lg">
+                • Мультиплатформенное решение с интеграцией IoT
+              </p>
+              <p className="text-lg">
+                • Защищенная инфраструктура и соответствие GDPR
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </div>
 
       {/* Charts Section */}
@@ -206,7 +257,7 @@ const Investors = () => {
         </div>
       </div>
 
-      {/* Business Plan Section with Enhanced Visuals */}
+      {/* Business Plan Section */}
       <div className="space-y-8 mt-16">
         <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
           Стратегия развития
@@ -273,7 +324,8 @@ const Investors = () => {
           Готовы инвестировать в будущее благополучия?
         </h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Присоединяйтесь к нам в создании глобальной платформы для улучшения качества жизни миллионов людей
+          Присоединяйтесь к нам в создании глобальной платформы для улучшения качества жизни миллионов людей. 
+          Наша миссия - сделать профессиональную психологическую поддержку доступной каждому.
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
           <div className="relative">
